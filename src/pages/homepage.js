@@ -13,7 +13,9 @@ const HomePage = () => {
             <OutletContainer>
                 <Outlet context={[trackUri, setTrackUri]} />
             </OutletContainer>
-            <Player trackUri={trackUri} />
+            <PlayerContainer>
+                <Player trackUri={trackUri} />
+            </PlayerContainer>
         </HomeContainer>
     );
 }

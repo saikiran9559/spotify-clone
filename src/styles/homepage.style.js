@@ -16,6 +16,8 @@ export const OutletContainer = styled.div`
 `
 export const PlayerContainer = styled.div`
     postion: relative;
-    width: 100%;
-    background: blue;
+    // width: 100%;
+    // padding: 0 10px;
+    margin: 0 20px;
+    // background: blue;
 `

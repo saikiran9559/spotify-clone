@@ -78,7 +78,7 @@ const UserPlaylists = () => {
     return (
         <PlaylistContainer>
             <FlexRowContainer>
-                <Heading >{width}</Heading>
+                <Heading >My PlayLists</Heading>
                 {isFlow ? <Button> <Link
                     to='/playlists'
                 >SEE ALL</Link></Button>

@@ -40,9 +40,11 @@ export const CardsContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
-    gap:10px;
+    // gap:10px;
+    justify-content: space-between;
     @media (max-width:485px){
         overflow-x:scroll;
+        gap:10px;
         white-space: non-wrap;
         justify-content: none;
     }

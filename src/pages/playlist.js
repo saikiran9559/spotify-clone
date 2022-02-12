@@ -60,7 +60,7 @@ const Playlist = () => {
             <PlaylistContainer>
                 <PlayListImage src={playlist?.images[0].url} alt={playlist?.images[0].url} />
                 <PlaylistContentContainer>
-                    <Type> {width}</Type>
+                    <Type> PLAYLIST</Type>
                     <Title>  {playlist?.name} </Title>
                     <Description> {playlist?.description}</Description>
                 </PlaylistContentContainer>
