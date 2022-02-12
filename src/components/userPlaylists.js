@@ -47,7 +47,7 @@ const UserPlaylists = () => {
         }
     }
     useEffect(() => {
-        getRequest("me/playlists").then(res => {
+        getRequest("/v1/me/playlists").then(res => {
             // console.log(res.data)
             setTracks(res.data)
         }).catch(err => {

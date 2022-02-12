@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width:95%;
-    height:100%;
-    background: #121212;
+    // background: blue;
+    // height: 100%;
+    // background: #121212;
     padding:2.5%;
     // padding:20px;
 `
@@ -20,5 +21,5 @@ export const CardsContainer = styled.div`
     display:flex;
     flex-wrap:wrap;
     gap:30px;
-
+    // overflow-y:auto;
 `

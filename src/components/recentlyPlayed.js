@@ -48,7 +48,7 @@ const RecentlyPlayed = () => {
         }
     }
     useEffect(() => {
-        getRequest("me/player/recently-played").then(res => {
+        getRequest("/v1/me/player/recently-played").then(res => {
             console.log(res.data)
             setTracks(res.data)
         }).catch(err => {

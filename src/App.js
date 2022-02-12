@@ -5,6 +5,8 @@ import DashBoard from './pages/dashboard'
 import Redirect from './pages/redirect'
 import PlayList from './pages/playlist'
 import UserAllPlaylists from './pages/userAllPlaylists'
+import Search from './pages/search'
+import AllSearchTracks from './pages/allSearchTracks'
 const App = () => {
     return (
         <BrowserRouter>
@@ -15,6 +17,9 @@ const App = () => {
                     <Route path='/redirect' element={<Redirect />} />
                     <Route path='/playlist' element={<PlayList />} />
                     <Route path='/playlists' element={<UserAllPlaylists />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/search/:query" element={<Search />} />
+                    <Route path="/search/:query/tracks" element={<AllSearchTracks />} />
                 </Route>
             </Routes>
         </BrowserRouter >

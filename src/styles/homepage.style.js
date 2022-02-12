@@ -1,23 +1,36 @@
 
 import styled from 'styled-components'
 
-export const HomeContainer = styled.div`
+export const Container = styled.div`
     width:100%;
-    height:98.99vh;
+    height:100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: #121212;
-    flex-grow:1;
 `
+
+export const HomeContainer = styled.div`
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    padding-bottom:100px;
+`
+export const DashContainer = styled.div`
+    position: relative;
+    width: 80%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+`
+
 export const OutletContainer = styled.div`
-    height: 90%;
+    // height: 100%;
+    width:100%;
+    flex-grow:1;
     overflow-y:auto;
 `
 export const PlayerContainer = styled.div`
-    postion: relative;
-    // width: 100%;
-    // padding: 0 10px;
-    margin: 0 20px;
-    // background: blue;
+    position: fixed;
+    width: 95%;
+    bottom:0px;
+    margin: 0 2.5%;
 `

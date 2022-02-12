@@ -6,6 +6,7 @@ import {
     DashBoard,
 } from '../styles/dashboard.style'
 import {useNavigate} from 'react-router-dom'
+
 const Dashboard = () => {
     const navigate = useNavigate();
     const accessToken = JSON.parse(localStorage.getItem('params')).access_token;

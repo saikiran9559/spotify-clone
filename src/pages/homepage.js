@@ -1,23 +1,35 @@
 import {useState} from 'react'
 import Player from '../components/player'
+import NavBar from '../components/navbar/navbar'
+import Header from '../components/header/header'
 import {Outlet} from "react-router-dom"
 import {
     HomeContainer,
+    Container,
+    DashContainer,
+    OutletContainer,
     PlayerContainer,
-    OutletContainer
 } from '../styles/homepage.style'
 const HomePage = () => {
     const [trackUri, setTrackUri] = useState();
     return (
-        <HomeContainer >
-            <OutletContainer>
-                <Outlet context={[trackUri, setTrackUri]} />
-            </OutletContainer>
+        <Container>
+            <HomeContainer>
+                <NavBar />
+                <DashContainer>
+                    <Header />
+                    <OutletContainer>
+                        <Outlet context={[trackUri, setTrackUri]} />
+                    </OutletContainer>
+                </DashContainer>
+            </HomeContainer>
             <PlayerContainer>
                 <Player trackUri={trackUri} />
             </PlayerContainer>
-        </HomeContainer>
+        </Container >
     );
 }
+
+
 
 export default HomePage;

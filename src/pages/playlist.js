@@ -1,5 +1,6 @@
 
 import {useEffect, useState} from 'react'
+import {useNavigate} from 'react-router-dom';
 import {ReactComponent as Dots} from '../assets/three-dots-menu-svgrepo-com.svg'
 import {ReactComponent as Heart} from '../assets/heart-svgrepo-com.svg'
 import {ReactComponent as Play} from '../assets/play-button-svgrepo-com.svg';
@@ -30,6 +31,7 @@ import {
 } from '../styles/track.component.style'
 
 const Playlist = () => {
+    const navigate = useNavigate()
     const [playlist, setPlaylist] = useState()
     const [width, setWidth] = useState(window.innerWidth)
     const [trackUri, setTrackUri] = useOutletContext()
@@ -40,11 +42,12 @@ const Playlist = () => {
     useEffect(() => {
         const playlistId = localStorage.getItem('playlistId')
         // console.log("playlist id", playlistId)
-        getRequest(`playlists/${playlistId}`)
+        getRequest(`/v1/playlists/${playlistId}`)
             .then(res => {
                 setPlaylist(res.data)
             }).catch(err => {
                 console.log(err)
+                navigate("/login")
             })
     }, [])
 

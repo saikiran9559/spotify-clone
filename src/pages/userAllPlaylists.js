@@ -10,7 +10,7 @@ import {useState, useEffect} from 'react'
 const UserAllPlaylists = () => {
     const [playlists, setPlayLists] = useState();
     useEffect(() => {
-        getRequest("me/playlists").then(res => {
+        getRequest("/v1/me/playlists").then(res => {
             console.log(res.data)
             setPlayLists(res.data)
         }).catch(err => {
