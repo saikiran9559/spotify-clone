@@ -7,6 +7,7 @@ import PlayList from './pages/playlist'
 import UserAllPlaylists from './pages/userAllPlaylists'
 import Search from './pages/search'
 import AllSearchTracks from './pages/allSearchTracks'
+import AllResultType from './components/searchAllResultType/searchAllResultType'
 const App = () => {
     return (
         <BrowserRouter>
@@ -20,6 +21,11 @@ const App = () => {
                     <Route path="/search" element={<Search />} />
                     <Route path="/search/:query" element={<Search />} />
                     <Route path="/search/:query/tracks" element={<AllSearchTracks />} />
+                    <Route path="/search/:query/albums" element={<AllResultType type="albums" key="albums" />} />
+                    <Route path="/search/:query/playlists" element={<AllResultType type="playlits" key="playlists" />} />
+                    <Route path="/search/:query/episodes" element={<AllResultType type="episodes" key="episodes" />} />
+                    <Route path="/search/:query/artists" element={<AllResultType type="artists" key="artists" />} />
+                    <Route path="/search/:query/shows" element={<AllResultType type="shows" key="shows" />} />
                 </Route>
             </Routes>
         </BrowserRouter >

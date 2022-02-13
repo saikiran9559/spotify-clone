@@ -12,12 +12,13 @@ import {
 } from '../styles/homepage.style'
 const HomePage = () => {
     const [trackUri, setTrackUri] = useState();
+    const [menuClicked, setMenuClicked] = useState()
     return (
         <Container>
             <HomeContainer>
-                <NavBar />
+                <NavBar menuClicked={menuClicked} setMenuClicked={setMenuClicked} />
                 <DashContainer>
-                    <Header />
+                    <Header menuClicked={menuClicked} setMenuClicked={setMenuClicked} />
                     <OutletContainer>
                         <Outlet context={[trackUri, setTrackUri]} />
                     </OutletContainer>
