@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import {useEffect, useState} from 'react'
 import {ReactComponent as Home} from './../../assets/home-icon-silhouette-svgrepo-com.svg'
 import {ReactComponent as Search} from './../../assets/search-magnifier-outline-svgrepo-com.svg'
 import {ReactComponent as Library} from './../../assets/library-svgrepo-com.svg'
