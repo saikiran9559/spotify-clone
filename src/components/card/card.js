@@ -1,6 +1,6 @@
 
 import {useNavigate} from 'react-router-dom';
-import {ReactComponent as Play} from '../assets/play-button-svgrepo-com.svg';
+import {ReactComponent as Play} from './../../assets/play-button-svgrepo-com.svg';
 import {
     Container,
     ImageBox,
@@ -8,7 +8,7 @@ import {
     PlayButton,
     PlayListName,
     By
-} from '../styles/card.component.style'
+} from './style'
 const Card = ({input}) => {
     const navigate = useNavigate()
     const goTo = () => {

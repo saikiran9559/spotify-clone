@@ -12,6 +12,7 @@ const Search = () => {
     const [result, setResult] = useState()
     const {query} = useParams();
     useEffect(() => {
+        if (!query) return;
         const searchIt = () => {
 
             getRequest("/v1/search", {
@@ -37,7 +38,7 @@ const Search = () => {
             clearTimeout(timerId);
         };
     }, [query])
-    if (!result) return <div>empty</div>;
+    if (!query || !result) return <div>empty</div>;
     return (
         <Container>
             <TopAndTracks>

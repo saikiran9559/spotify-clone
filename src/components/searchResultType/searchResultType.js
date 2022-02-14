@@ -1,4 +1,4 @@
-import Card from './../card'
+import Card from './../card/card'
 import {Link, useParams} from 'react-router-dom'
 import {
     Container,

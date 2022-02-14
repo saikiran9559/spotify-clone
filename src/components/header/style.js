@@ -9,7 +9,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 2.5%;
+    margin: 20px auto;
     // @media(max-width:720px){
     //     justify-content: center;
     // }
@@ -39,8 +39,25 @@ export const MenuIcon = styled.div`
         display: none;
     }
 `
+export const SearchContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width:50%;
+    height:40px;
+    background: white;
+    border-radius: 25px;
+    align-items:center;
+    padding: 0 10px;
+    gap: 10px;
+`
 export const Search = styled.input`
-    width: 200px;
+    background: none;
+    flex-grow:1;
+    border:none;
+    &:focus{
+        outline: none;
+        border:none;
+    }
 `
 export const Profile = styled.div`
     width: 100px;

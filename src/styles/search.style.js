@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+    width: 95%;
+    padding: 0px 2.5%;
     display: flex;
     flex-direction: column;
 `
@@ -10,5 +11,4 @@ export const TopAndTracks = styled.div`
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: 17rem;
 `

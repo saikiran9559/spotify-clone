@@ -12,7 +12,7 @@ export const HomeContainer = styled.div`
     display:flex;
     flex-direction: row;
     width:100%;
-    padding-bottom:100px;
+    // padding-bottom:100px;
 `
 export const DashContainer = styled.div`
     position: relative;
@@ -20,12 +20,17 @@ export const DashContainer = styled.div`
     height:100%;
     display: flex;
     flex-direction: column;
+    @media(max-width:700px){
+        width:100%;
+    }
+    // padding-bottom: 100px;
 `
 
 export const OutletContainer = styled.div`
     // height: 100%;
     width:100%;
-    flex-grow:1;
+    padding-bottom: 100px;
+    // flex-grow:1;
     overflow-y:auto;
 `
 export const PlayerContainer = styled.div`

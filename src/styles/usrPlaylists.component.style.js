@@ -36,13 +36,14 @@ export const Button = styled.button`
 `
 
 export const CardsContainer = styled.div`
-    width: 100%;
+    max-width: 100%;
+    min-width:100%;
     position: relative;
     display: flex;
     flex-direction: row;
     // gap:10px;
     justify-content: space-between;
-    @media (max-width:485px){
+    @media (max-width:700px){
         overflow-x:scroll;
         gap:10px;
         white-space: non-wrap;
