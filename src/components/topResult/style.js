@@ -33,10 +33,11 @@ export const Imgae = styled.img`
     border-radius: 10px;
     
 `
-export const Name = styled.h1`
-    font-size: 35px;
-    font-weight: 400;
-    margin: 0px;
+export const Name = styled.div`
+    // font-size: 35px;
+    // font-weight: 400;
+    // margin: 0px 0px;
+    max-width:70%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

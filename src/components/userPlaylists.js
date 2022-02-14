@@ -2,7 +2,7 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import getRequest from '../services/axios'
-import Card from '../components/card'
+import Card from '../components/card/card'
 import {useNavigate} from 'react-router-dom'
 import {
     PlaylistContainer,
@@ -31,14 +31,14 @@ const UserPlaylists = () => {
     }
 
     function handleResize() {
-        if (window.innerWidth < 485) {
+        if (window.innerWidth < 700) {
             setLimit(length);
             setIsFlow(true)
         }
-        else if (window.innerWidth > 1040 && length >= 4) {
+        else if (window.innerWidth > 1220 && length >= 4) {
             setLimit(4)
         }
-        else if (window.innerWidth <= 1040 && window.innerWidth > 940 && length >= 3) {
+        else if (window.innerWidth <= 1220 && window.innerWidth > 940 && length >= 3) {
             setLimit(3)
         } else if (window.innerWidth <= 940 && length >= 2) {
             setLimit(2)
@@ -52,7 +52,7 @@ const UserPlaylists = () => {
             setTracks(res.data)
         }).catch(err => {
             console.log(err)
-            navigate('/login')
+            // navigate('/login')
         })
     }, [])
     useEffect(() => {

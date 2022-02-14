@@ -1,7 +1,6 @@
 
 import {useEffect} from 'react'
 import UserPlaylist from '../components/userPlaylists'
-import RecentlyPlayed from '../components/recentlyPlayed'
 import {
     DashBoard,
 } from '../styles/dashboard.style'
@@ -19,7 +18,6 @@ const Dashboard = () => {
     return (
         <DashBoard >
             <UserPlaylist />
-            <RecentlyPlayed />
         </DashBoard>
     );
 }

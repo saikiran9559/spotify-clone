@@ -1,6 +1,6 @@
 
 import getRequest from '../services/axios'
-import Card from '../components/card'
+import Card from '../components/card/card'
 import {
     Container,
     Heading,
