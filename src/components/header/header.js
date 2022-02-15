@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import {ReactComponent as Back} from './../../assets/leftArrow.svg'
 import {ReactComponent as Clear} from './../../assets/wrong-svgrepo-com.svg'
 import {ReactComponent as Front} from './../../assets/rightArrow.svg'
@@ -8,10 +7,8 @@ import {useNavigate} from 'react-router-dom'
 import {
     Container,
     NavButtons,
-    MenuIcon,
     SearchContainer,
     Search,
-    Profile,
     NavButton,
 } from './style'
 
@@ -46,7 +43,4 @@ const Header = ({width, setWidth}) => {
         </Container>
     );
 }
-// {input ? <Clear onClick={() => clear()} width="20" height="20" fill="black" /> : <></>}
-
-// <MenuIcon><Menu fill="white" width="30" height="30" /></MenuIcon>
 export default Header

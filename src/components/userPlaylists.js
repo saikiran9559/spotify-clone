@@ -1,9 +1,7 @@
-
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import getRequest from '../services/axios'
 import Card from '../components/card/card'
-import {useNavigate} from 'react-router-dom'
 import {
     PlaylistContainer,
     FlexRowContainer,
@@ -11,14 +9,13 @@ import {
     Button,
     CardsContainer,
 } from '../styles/usrPlaylists.component.style'
+
 const UserPlaylists = () => {
-    const navigate = useNavigate()
     const hasWindow = typeof window !== 'undefined';
     const [tracks, setTracks] = useState();
     const [length, setLength] = useState(tracks?.items.length)
     const [limit, setLimit] = useState(length)
     const [isFlow, setIsFlow] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth)
 
     const getlen = () => {
         setLength(tracks?.items.length)
@@ -48,13 +45,12 @@ const UserPlaylists = () => {
     }
     useEffect(() => {
         getRequest("/v1/me/playlists").then(res => {
-            // console.log(res.data)
             setTracks(res.data)
         }).catch(err => {
             console.log(err)
-            // navigate('/login')
         })
     }, [])
+
     useEffect(() => {
         getlen()
         handleResize()
@@ -62,7 +58,6 @@ const UserPlaylists = () => {
 
     useEffect(() => {
         if (hasWindow) {
-            setWidth(window.innerWidth)
             handleResize()
             window.addEventListener('resize', handleResize);
             return () => window.removeEventListener('resize', handleResize);

@@ -22,6 +22,8 @@ const Track = ({track, index}) => {
         var seconds = ((millis % 60000) / 1000).toFixed(0);
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
+    console.log(trackUri)
+
     return (
 
         <Container onClick={() => setTrackUri(track.uri)}>
