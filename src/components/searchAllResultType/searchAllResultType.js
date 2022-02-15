@@ -7,9 +7,11 @@ import {
     Heading,
     CardsContainer
 } from './style'
+
 const AllResultType = ({type}) => {
     const [result, setResult] = useState()
     const {query} = useParams();
+
     useEffect(() => {
 
         getRequest("/v1/search", {
@@ -25,7 +27,9 @@ const AllResultType = ({type}) => {
         }).catch(err => {
             console.log(err)
         })
+
     }, [])
+
     return (
         <Container>
             <Heading>{`All ${result?.items[0].type}s for "${query}"`}</Heading>
