@@ -16,16 +16,16 @@ const App = () => {
                 <Route path='/redirect' element={<Redirect />} />
                 <Route element={<HomePage />} >
                     <Route path='/' element={<DashBoard />} />
-                    <Route path='/playlist' element={<PlayList />} />
-                    <Route path='/playlists' element={<UserAllPlaylists />} />
-                    <Route path='/search' element={<Search />} />
-                    <Route path="/search/:query" element={<Search />} />
-                    <Route path="/search/:query/artists" element={<AllResultType type="artists" key="artists" />} />
-                    <Route path="/search/:query/tracks" element={<AllSearchTracks />} />
-                    <Route path="/search/:query/albums" element={<AllResultType type="albums" key="albums" />} />
-                    <Route path="/search/:query/playlists" element={<AllResultType type="playlists" key="playlists" />} />
-                    <Route path="/search/:query/episodes" element={<AllResultType type="episodes" key="episodes" />} />
-                    <Route path="/search/:query/shows" element={<AllResultType type="shows" key="shows" />} />
+                    <Route path='playlist' element={<PlayList />} />
+                    <Route path='playlists' element={<UserAllPlaylists />} />
+                    <Route path='search' element={<Search />} />
+                    <Route path="search/:query" element={<Search />} />
+                    <Route path="search/:query/artists" element={<AllResultType type="artists" key="artists" />} />
+                    <Route path="search/:query/tracks" element={<AllSearchTracks />} />
+                    <Route path="search/:query/albums" element={<AllResultType type="albums" key="albums" />} />
+                    <Route path="search/:query/playlists" element={<AllResultType type="playlists" key="playlists" />} />
+                    <Route path="search/:query/episodes" element={<AllResultType type="episodes" key="episodes" />} />
+                    <Route path="search/:query/shows" element={<AllResultType type="shows" key="shows" />} />
                 </Route>
             </Routes>
         </BrowserRouter >

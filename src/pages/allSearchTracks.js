@@ -2,6 +2,7 @@ import {useParams, useOutletContext} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import getRequest from '../services/axios'
 import {
+    Container1,
     Container,
     TrackDetails,
     Number,
@@ -63,12 +64,12 @@ const AllSearchTrack = () => {
         })
     }, [])
     return (
-        <div>
+        <Container1>
             {
                 result?.items.map((track, index) => {
                     return <Track track={track} index={index} key={track.id} />
                 })}
-        </div>
+        </Container1>
     );
 }
 export default AllSearchTrack

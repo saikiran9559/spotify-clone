@@ -21,7 +21,7 @@ const HomePage = () => {
     return (
         <Container>
             <HomeContainer>
-                <NavBar width={width} />
+                <NavBar width={width} setWidth={setWidth} />
                 <DashContainer>
                     <Header width={width} setWidth={setWidth} />
                     <OutletContainer>

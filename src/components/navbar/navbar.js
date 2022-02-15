@@ -4,21 +4,29 @@ import {ReactComponent as Search} from './../../assets/search-magnifier-outline-
 import {ReactComponent as Library} from './../../assets/library-svgrepo-com.svg'
 import {ReactComponent as AddIcon} from './../../assets/add-svgrepo-com.svg'
 import {ReactComponent as Like} from './../../assets/heart-svgrepo-com.svg'
-
+import {ReactComponent as Wrong} from './../../assets/wrong-svgrepo-com.svg'
 import {
     Container,
+    IconAndButton,
+    ButtonClear,
     Items,
     Name,
     Item,
     Playlists,
 } from './style'
-const NavBar = ({width}) => {
+const NavBar = ({width, setWidth}) => {
     console.log(width)
     return (
         <Container width={width}>
+            <IconAndButton>
+                <h1>Spotify</h1>
+                <ButtonClear>
+                    <Wrong onClick={() => setWidth(false)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
+                </ButtonClear>
+            </IconAndButton>
             <Items>
-                <Link to="/"><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
-                <Link to="/search" > <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
+                <Link to="/" onClick={() => setWidth(false)}><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
+                <Link to="/search" onClick={() => setWidth(false)}> <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
                 <Item ><Library width="25" height="25" fill="white" />Library</Item>
             </Items>
             <Items>

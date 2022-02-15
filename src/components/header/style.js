@@ -3,13 +3,15 @@ import styled from "styled-components"
 export const Container = styled.div`
     position:sticky;
     top:0px;
-    width:95%;
+    width:94%;
     z-index:1;
     background-color: #121212;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px auto;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 3%;
     // @media(max-width:720px){
     //     justify-content: center;
     // }
@@ -49,6 +51,18 @@ export const SearchContainer = styled.div`
     align-items:center;
     padding: 0 10px;
     gap: 10px;
+    @media(max-width: 700px){
+        flex-grow:1;
+    }
+`
+export const SearchIcon = styled.div`
+    display: flex;
+    @media(max-width: 485px){
+        display: none;
+    }
+`
+export const ClearIcon = styled.div`
+    display: flex;
 `
 export const Search = styled.input`
     background: none;
