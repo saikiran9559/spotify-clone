@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import getRequest from '../services/axios'
 import Card from '../components/card/card'
@@ -11,6 +12,7 @@ import {
 } from '../styles/usrPlaylists.component.style'
 
 const UserPlaylists = () => {
+    const {navigate} = useNavigate();
     const hasWindow = typeof window !== 'undefined';
     const [tracks, setTracks] = useState();
     const [length, setLength] = useState(tracks?.items.length)
@@ -48,6 +50,7 @@ const UserPlaylists = () => {
             setTracks(res.data)
         }).catch(err => {
             console.log(err)
+            navigate("/login")
         })
     }, [])
 
