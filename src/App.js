@@ -13,13 +13,13 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path='/redirect' element={<Redirect />} />
                 <Route element={<HomePage />} >
                     <Route path='/' element={<DashBoard />} />
-                    <Route path='redirect' element={<Redirect />} />
-                    <Route path='playlist' element={<PlayList />} />
-                    <Route path='playlists' element={<UserAllPlaylists />} />
-                    <Route path='search' element={<Search />} />
-                    <Route path="search/:query" element={<Search />} />
+                    <Route path='/playlist' element={<PlayList />} />
+                    <Route path='/playlists' element={<UserAllPlaylists />} />
+                    <Route path='/search' element={<Search />} />
+                    <Route path="/search/:query" element={<Search />} />
                     <Route path="/search/:query/artists" element={<AllResultType type="artists" key="artists" />} />
                     <Route path="/search/:query/tracks" element={<AllSearchTracks />} />
                     <Route path="/search/:query/albums" element={<AllResultType type="albums" key="albums" />} />

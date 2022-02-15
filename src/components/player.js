@@ -6,7 +6,7 @@ const Player = ({trackUri}) => {
     const [play, setPlay] = useState(false)
     const accessToken = JSON.parse(localStorage.getItem('params')).access_token
     useEffect(() => setPlay(true), [trackUri])
-    if (!accessToken) return null;
+    if (!accessToken) return <></>;
     return (
         <SpotifyPlayer
 

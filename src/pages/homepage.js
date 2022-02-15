@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Player from '../components/player'
 import NavBar from '../components/navbar/navbar'
 import Header from '../components/header/header'
-import {Outlet} from "react-router-dom"
+import {Outlet, useNavigate, Navigate} from "react-router-dom"
 import {
     HomeContainer,
     Container,
@@ -10,9 +10,14 @@ import {
     OutletContainer,
     PlayerContainer,
 } from '../styles/homepage.style'
+
 const HomePage = () => {
     const [trackUri, setTrackUri] = useState();
     const [width, setWidth] = useState(false);
+    const accessToken = JSON.parse(localStorage.getItem('params'))
+
+    if (!accessToken) return <Navigate to="/login" />
+
     return (
         <Container>
             <HomeContainer>

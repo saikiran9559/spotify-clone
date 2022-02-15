@@ -21,7 +21,9 @@ const Redirect = () => {
         const params = getParamValues(window.location.hash);
         console.log(params)
         localStorage.setItem('params', JSON.stringify(params));
+
         navigate('/');
+        console.log(params)
     }, []);
     return (
         <div>
