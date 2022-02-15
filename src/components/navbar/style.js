@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-    position:absolute;
+    position:sticky;
     top:0px;
     left: 0px;
-    height: 100%;
+    height: 100vh;
     z-index: 1;
-    width: ${({width}) => width ? "300px" : "0px"};
+    width: 250px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -16,13 +16,33 @@ export const Container = styled.nav`
     white-space: nowrap;
 
     @media(max-width:700px){
+// ${({width}) => width ? "300px" : "0px"}
+        position: fixed;
+        left:0px;
+        width: ${({width}) => width ? "100%" : "0%"};
+        z-index:2;
     }
     // align-items: center;
+`
+export const IconAndButton = styled.div`
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 `
 export const Items = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    margin:0 auto;
+`
+export const ButtonClear = styled.div`
+    display: flex;
+    @media(min-width:700px){
+        display:none;
+    }
 `
 export const Item = styled.div`
     font-size: 0.875rem;
@@ -33,8 +53,7 @@ export const Item = styled.div`
     height: 40px;
     gap:16px;
     width: 90%;
-    width:70%;
-    margin:0 auto;
+    width: 100%;
 `
 export const Name = styled.div`
     font-size: 0.875rem;

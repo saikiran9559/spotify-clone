@@ -1,5 +1,15 @@
 import styled from 'styled-components'
-
+export const Container1 = styled.div`
+    // display: none;
+    @media(max-width:601px){
+        // display: flex;
+        // flex-direcion: column;
+        padding-top: 30px;
+    }
+    @media(min-width:601px){
+        display: inline;
+    }
+`
 export const Container = styled.div`
     width:100%;
     display: flex;

@@ -16,7 +16,7 @@ export const HomeContainer = styled.div`
 `
 export const DashContainer = styled.div`
     position: relative;
-    width: 80%;
+    width: 100%;
     height:100%;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,7 @@ export const OutletContainer = styled.div`
 `
 export const PlayerContainer = styled.div`
     position: fixed;
+    z-index: 5;
     width: 95%;
     bottom:0px;
     margin: 0 2.5%;
