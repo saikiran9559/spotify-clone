@@ -23,8 +23,9 @@ const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
 const SPOTIFY_APP_AUTHORIZE_URL = "https://accounts.spotify.com/authorize"
 const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const Login = () => {
-    console.log(process.env)
-    const AUTH_URL = `${SPOTIFY_APP_AUTHORIZE_URL}?client_id=${REACT_APP_CLIENT_ID}&redirect_uri=${path}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
+
+    const AUTH_URL = `${SPOTIFY_APP_AUTHORIZE_URL}?client_id=${REACT_APP_CLIENT_ID}&response_type=token&redirect_uri=${path}&scope=${SCOPES_URL_PARAM}&show_dialog=true`;
+
 
     return (
         <Container>

@@ -1,6 +1,7 @@
+
 import {useParams, useOutletContext} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import getRequest from '../services/axios'
+import getRequest from './../../services/axios'
 import {
     Container1,
     Container,
@@ -15,7 +16,7 @@ import {
     Duration
 
 
-} from '../styles/allSearchTracks.style'
+} from './style'
 const Track = ({track, index}) => {
     const [trackUri, setTrackUri] = useOutletContext()
     function millisToMinutesAndSeconds(millis) {
@@ -23,7 +24,7 @@ const Track = ({track, index}) => {
         var seconds = ((millis % 60000) / 1000).toFixed(0);
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
-    console.log(trackUri)
+    // console.log(trackUri)
 
     return (
 
@@ -46,7 +47,6 @@ const Track = ({track, index}) => {
 const AllSearchTrack = () => {
     const {query} = useParams()
     const [result, setResult] = useState()
-    console.log(query)
     useEffect(() => {
 
         getRequest("/v1/search", {
@@ -57,7 +57,7 @@ const AllSearchTrack = () => {
             market: "IN",
             offset: 5,
         }).then(res => {
-            console.log(res.data.tracks)
+            // console.log(res.data.tracks)
             setResult(res.data.tracks)
         }).catch(err => {
             console.log(err)

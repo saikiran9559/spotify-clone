@@ -3,7 +3,6 @@
 import {useEffect} from 'react'
 import {useNavigate} from "react-router-dom";
 const Redirect = () => {
-
     const navigate = useNavigate();
     /* eslint implicit-arrow-linebreak:  off */
     const getParamValues = (url) =>
@@ -21,7 +20,6 @@ const Redirect = () => {
         const params = getParamValues(window.location.hash);
         console.log(params)
         localStorage.setItem('params', JSON.stringify(params));
-
         navigate('/');
         console.log(params)
     }, []);

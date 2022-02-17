@@ -16,7 +16,7 @@ import {
     NavButton,
 } from './style'
 
-const Header = ({width, setWidth}) => {
+const Header = ({setNav}) => {
     const [input, setInput] = useState("")
     const isSearchPage = new RegExp(
         "search"
@@ -34,9 +34,6 @@ const Header = ({width, setWidth}) => {
 
     return (
         <Container>
-            <MenuIcon>
-                <Menu onClick={() => setWidth(!width)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
-            </MenuIcon>
             <NavButtons>
                 <NavButton onClick={() => navigate(-1)}><Back fill="white" width="20" height="20" /></NavButton>
                 <NavButton onClick={() => navigate(+1)}><Front fill="white" width="20" height="20" /></NavButton>
@@ -48,6 +45,9 @@ const Header = ({width, setWidth}) => {
                     <ClearIcon><Clear onClick={() => clear()} width="15" height="15" fill="black" /></ClearIcon>
                 </SearchContainer>
                 : <></>}
+            <MenuIcon>
+                <Menu onClick={() => setNav(true)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
+            </MenuIcon>
         </Container>
     );
 }

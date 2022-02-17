@@ -6,7 +6,7 @@ import {ReactComponent as Heart} from '../assets/heart-svgrepo-com.svg'
 import {ReactComponent as Play} from '../assets/play-button-svgrepo-com.svg';
 import getRequest from '../services/axios'
 import Track from '../components/track'
-import {useOutletContext} from 'react-router-dom';
+import {useOutletContext, useParams} from 'react-router-dom';
 import {
     Container,
     PlaylistContainer,
@@ -35,14 +35,14 @@ const Playlist = () => {
     const [playlist, setPlaylist] = useState()
     const [width, setWidth] = useState(window.innerWidth)
     const [trackUri, setTrackUri] = useOutletContext()
+    const {id} = useParams()
+    const alterImage = "./../assets/altermateImage.jpg"
     const handleResize = () => {
         setWidth(window.innerWidth)
     }
 
     useEffect(() => {
-        const playlistId = localStorage.getItem('playlistId')
-        // console.log("playlist id", playlistId)
-        getRequest(`/v1/playlists/${playlistId}`)
+        getRequest(`/v1/playlists/${id}`)
             .then(res => {
                 setPlaylist(res.data)
             }).catch(err => {
@@ -61,7 +61,7 @@ const Playlist = () => {
         <Container>
 
             <PlaylistContainer>
-                <PlayListImage src={playlist?.images[0].url} alt={playlist?.images[0].url} />
+                <PlayListImage src={playlist?.images[0].url} alt={alterImage} />
                 <PlaylistContentContainer>
                     <Type> PLAYLIST</Type>
                     <Title>  {playlist?.name} </Title>

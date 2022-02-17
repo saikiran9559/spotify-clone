@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 export const getRequest = async (url, params) => {
-    console.log(localStorage.getItem('params'))
+    // console.log(localStorage.getItem('params'))
     const accessToken = JSON.parse(localStorage.getItem('params')).access_token
     const Data = await axios
         .get(

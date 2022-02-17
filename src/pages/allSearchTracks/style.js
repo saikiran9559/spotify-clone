@@ -1,13 +1,13 @@
+
 import styled from 'styled-components'
 export const Container1 = styled.div`
-    // display: none;
-    @media(max-width:601px){
+    display: inline;
+    padding-top: 30px;
+    @media(min-width:601px){
+        display: none;
         // display: flex;
         // flex-direcion: column;
-        padding-top: 30px;
-    }
-    @media(min-width:601px){
-        display: inline;
+    padding-top:0px;
     }
 `
 export const Container = styled.div`
