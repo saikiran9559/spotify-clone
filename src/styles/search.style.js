@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const EmptyContainer = styled.div`
+    margin:0 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 export const Container = styled.div`
     position: relative;
     width: 95%;
@@ -23,9 +30,10 @@ export const SelectType = styled.div`
     gap: 10px;
     overflow-x: auto;
     position: fixed;
+    // padding: 0px 0px;
     top:70px;
     background: #121212;
-    z-index: 2;
+    z-index: 1;
 `
 export const TypeButton = styled.button`
     border: none;

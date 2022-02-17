@@ -9,7 +9,7 @@ import {
 const SearchTracks = ({result}) => {
     const {query} = useParams()
     const path = "/search/" + query + "/tracks";
-    console.log(result)
+    // console.log(result)
     return (
         <Container>
             <HeaderAndLink>

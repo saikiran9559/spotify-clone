@@ -1,4 +1,5 @@
 
+
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -16,7 +17,7 @@ export const HomeContainer = styled.div`
 `
 export const DashContainer = styled.div`
     position: relative;
-    width: 100%;
+    width: 80%;
     height:100%;
     display: flex;
     flex-direction: column;

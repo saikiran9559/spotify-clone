@@ -5,7 +5,7 @@ export const Container = styled.nav`
     top:0px;
     left: 0px;
     height: 100vh;
-    z-index: 1;
+    z-index: 3;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ export const Container = styled.nav`
 // ${({width}) => width ? "300px" : "0px"}
         position: fixed;
         left:0px;
-        width: ${({width}) => width ? "100%" : "0%"};
+        width: ${({nav}) => nav? "100%" : "0%"};
         z-index:2;
     }
     // align-items: center;

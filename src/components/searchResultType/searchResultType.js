@@ -47,7 +47,7 @@ const SearchResultType = ({data, select, type}) => {
                         img: item.images[0]?.url,
                         id: item.id,
                         owner: item.type,
-                        name: "name",
+                        name: item.name,
                         type: item.type
                     }
                     return <Card input={input} key={item.id} />

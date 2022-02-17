@@ -1,11 +1,12 @@
 import {useEffect, useState} from "react";
-import AllSearchTrack from './allSearchTracks'
+import AllSearchTrack from './allSearchTracks/allSearchTracks'
 import getRequest from '../services/axios'
 import TopResult from '../components/topResult/topResult'
 import SearchTracks from '../components/searchTracks/searchTracks'
 import SearchResultType from '../components/searchResultType/searchResultType'
 import {useParams} from "react-router-dom";
 import {
+    EmptyContainer,
     Container,
     TopAndTracks,
     SelectType,
@@ -42,7 +43,7 @@ const Search = () => {
             clearTimeout(timerId);
         };
     }, [query])
-    if (!query || !result) return <div>empty</div>;
+    if (!query || !result) return <EmptyContainer>Explore the search page.<br /> Type something</EmptyContainer>;
     return (
         <Container>
             <TopAndTracks>

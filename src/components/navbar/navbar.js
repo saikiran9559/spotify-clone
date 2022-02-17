@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import {useEffect} from 'react';
 import {ReactComponent as Home} from './../../assets/home-icon-silhouette-svgrepo-com.svg'
 import {ReactComponent as Search} from './../../assets/search-magnifier-outline-svgrepo-com.svg'
 import {ReactComponent as Library} from './../../assets/library-svgrepo-com.svg'
@@ -14,19 +15,18 @@ import {
     Item,
     Playlists,
 } from './style'
-const NavBar = ({width, setWidth}) => {
-    console.log(width)
+const NavBar = ({nav, setNav}) => {
     return (
-        <Container width={width}>
+        <Container nav={nav}>
             <IconAndButton>
                 <h1>Spotify</h1>
                 <ButtonClear>
-                    <Wrong onClick={() => setWidth(false)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
+                    <Wrong onClick={() => setNav(false)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
                 </ButtonClear>
             </IconAndButton>
             <Items>
-                <Link to="/" onClick={() => setWidth(false)}><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
-                <Link to="/search" onClick={() => setWidth(false)}> <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
+                <Link to="/" onClick={() => setNav(false)}><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
+                <Link to="/search" onClick={() => setNav(false)}> <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
                 <Item ><Library width="25" height="25" fill="white" />Library</Item>
             </Items>
             <Items>

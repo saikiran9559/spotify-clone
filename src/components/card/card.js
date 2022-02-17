@@ -12,8 +12,7 @@ import {
 const Card = ({input}) => {
     const navigate = useNavigate()
     const goTo = () => {
-        localStorage.setItem('playlistId', input.id)
-        navigate(`/${input.type}`)
+        navigate(`/${input.type}/${input.id}`)
     }
     return (
         <Container onClick={goTo}>

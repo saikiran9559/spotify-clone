@@ -49,7 +49,7 @@ const UserPlaylists = () => {
         getRequest("/v1/me/playlists").then(res => {
             setTracks(res.data)
         }).catch(err => {
-            console.log(err)
+            console.log("userplaylists", err)
             navigate("/login")
         })
     }, [])

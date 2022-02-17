@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import Player from '../components/player'
-import NavBar from '../components/navbar/navbar'
-import Header from '../components/header/header'
+import Player from './../../components/player'
+import NavBar from './../../components/navbar/navbar'
+import Header from './../../components/header/header'
 import {Outlet, useNavigate, Navigate} from "react-router-dom"
 import {
     HomeContainer,
@@ -9,11 +9,11 @@ import {
     DashContainer,
     OutletContainer,
     PlayerContainer,
-} from '../styles/homepage.style'
+} from './style'
 
 const HomePage = () => {
     const [trackUri, setTrackUri] = useState();
-    const [width, setWidth] = useState(false);
+    const [nav, setNav] = useState(false);
     const accessToken = JSON.parse(localStorage.getItem('params'))
 
     if (!accessToken) return <Navigate to="/login" />
@@ -21,9 +21,9 @@ const HomePage = () => {
     return (
         <Container>
             <HomeContainer>
-                <NavBar width={width} setWidth={setWidth} />
+                <NavBar nav={nav} setNav={setNav} />
                 <DashContainer>
-                    <Header width={width} setWidth={setWidth} />
+                    <Header nav={nav} setNav={setNav} />
                     <OutletContainer>
                         <Outlet context={[trackUri, setTrackUri]} />
                     </OutletContainer>
