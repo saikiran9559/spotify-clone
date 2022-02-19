@@ -20,6 +20,7 @@ export const Heading = styled.h1`
 export const Card = styled.div`
     width: 95%;
     background: #181818;
+    cursor: pointer;
     flex-grow:1;
     border-radius: 10px;
     padding: 2.5%;

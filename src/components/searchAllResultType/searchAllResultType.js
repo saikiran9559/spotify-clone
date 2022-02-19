@@ -1,7 +1,7 @@
 import {useParams} from 'react-router-dom'
 import Card from './../card/card'
 import {useEffect, useState} from 'react';
-import getRequest from './../../services/axios'
+import {getRequest} from './../../services/axios'
 import {
     Container,
     Heading,

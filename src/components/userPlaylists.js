@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import getRequest from '../services/axios'
+import {getRequest} from '../services/axios'
 import Card from '../components/card/card'
 import {
     PlaylistContainer,
@@ -49,7 +49,7 @@ const UserPlaylists = () => {
         getRequest("/v1/me/playlists").then(res => {
             setTracks(res.data)
         }).catch(err => {
-            console.log("userplaylists", err)
+            // console.log("userplaylists", err)
             navigate("/login")
         })
     }, [])
@@ -78,7 +78,7 @@ const UserPlaylists = () => {
             <FlexRowContainer>
                 <Heading >My PlayLists</Heading>
                 {isFlow ? <Button> <Link
-                    to='/playlists'
+                    to='/playlists' style={{textDecoration: 'inherit', color: '#a1a1a1'}}
                 >SEE ALL</Link></Button>
                     : <></>}
             </FlexRowContainer>

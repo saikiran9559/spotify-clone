@@ -25,8 +25,8 @@ const NavBar = ({nav, setNav}) => {
                 </ButtonClear>
             </IconAndButton>
             <Items>
-                <Link to="/" onClick={() => setNav(false)}><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
-                <Link to="/search" onClick={() => setNav(false)}> <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
+                <Link to="/" style={{textDecoration: 'inherit'}} onClick={() => setNav(false)}><Item ><Home width="25" height="25" fill="white" /><Name>Home</Name></Item></Link>
+                <Link to="/search" style={{textDecoration: 'inherit'}} onClick={() => setNav(false)}> <Item ><Search width="25" height="25" fill="white" />Search</Item></Link>
                 <Item ><Library width="25" height="25" fill="white" />Library</Item>
             </Items>
             <Items>

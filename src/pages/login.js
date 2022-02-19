@@ -14,7 +14,6 @@ const SCOPES = [
     'user-library-read',
     'user-library-modify',
     'user-read-currently-playing',
-    'user-read-playback-state',
     'playlist-read-private',
     'user-read-recently-played',
 ];
@@ -29,7 +28,7 @@ const Login = () => {
 
     return (
         <Container>
-            <Button href={AUTH_URL}>
+            <Button style={{color: 'white'}} href={AUTH_URL}>
                 Login With Spotify
             </Button>
         </Container>

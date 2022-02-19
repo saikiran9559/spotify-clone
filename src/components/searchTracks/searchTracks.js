@@ -14,7 +14,7 @@ const SearchTracks = ({result}) => {
         <Container>
             <HeaderAndLink>
                 <Heading>Songs</Heading>
-                <Link to={path}><SeeAll>SEE ALL</SeeAll></Link>
+                <Link to={path} style={{textDecoration: 'inherit', color: '#a1a1a1'}}><SeeAll>SEE ALL</SeeAll></Link>
             </HeaderAndLink>
             {result.items.slice(0, 4).map((track) => {
                 return <Track track={track} key={track.id} />
