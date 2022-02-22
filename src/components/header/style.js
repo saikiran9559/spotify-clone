@@ -29,6 +29,7 @@ export const NavButtons = styled.div`
 `
 export const NavButton = styled.div`
     width: 40px;
+    cursor: pointer;
     height: 40px;
     border-radius: 100%;
     display: flex;

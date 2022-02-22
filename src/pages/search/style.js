@@ -1,5 +1,11 @@
-import styled from "styled-components";
 
+import styled from "styled-components";
+export const Tracks = styled.div`
+    display:inline;
+    @media(min-width:601px){
+        display: none;
+    }
+`
 export const EmptyContainer = styled.div`
     margin:0 10%;
     height: 100vh;

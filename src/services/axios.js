@@ -16,4 +16,17 @@ export const getRequest = async (url, params) => {
     return Data;
 }
 
-export default getRequest
+export const postRequest = async (url, params) => {
+    const accessToken = JSON.parse(localStorage.getItem('params')).access_token
+    const Data = await axios
+        .post(
+            `https://api.spotify.com${url}`, {
+            params: params,
+            headers: {
+                Accept: 'application/json',
+                Authorization: 'Bearer ' + accessToken,
+                'Content-Type': 'application/json',
+            },
+        })
+    return Data
+}

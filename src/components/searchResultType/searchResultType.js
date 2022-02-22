@@ -31,6 +31,10 @@ const SearchResultType = ({data, select, type}) => {
     }
 
     useEffect(() => {
+        handleSize();
+    }, [])
+
+    useEffect(() => {
         window.addEventListener('resize', handleSize);
         return () => window.removeEventListener('resize', handleSize)
     })
@@ -39,7 +43,7 @@ const SearchResultType = ({data, select, type}) => {
         <Container select={select} type={type}>
             <Header>
                 <HeaderName>{data.items[0].type}</HeaderName>
-                <Link to={too} ><SeeAll>See all</SeeAll></Link>
+                <Link to={too} style={{'font-size': '0.75rem', 'line-height': '1rem', letterSpacing: '0.1rem', textDecoration: 'inherit', color: '#a1a1a1'}}><SeeAll>SEE ALL</SeeAll></Link>
             </Header>
             <CardsContainer>
                 {data?.items.slice(0, limit).map((item) => {
@@ -53,7 +57,7 @@ const SearchResultType = ({data, select, type}) => {
                     return <Card input={input} key={item.id} />
                 })}
             </CardsContainer>
-        </Container>
+        </Container >
     );
 }
 

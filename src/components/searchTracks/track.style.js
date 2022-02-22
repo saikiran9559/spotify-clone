@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    cursor: pointer;
     width:94%;
     padding: 5px 2.5%;
     display: flex;

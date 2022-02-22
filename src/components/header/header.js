@@ -42,13 +42,13 @@ const Header = ({setNav}) => {
                 <SearchContainer>
                     <SearchIcon><SearchIcon1 width="25" height="25" fill="black" /></SearchIcon>
                     <Search placeholder="Artists, Songs or Podcasts" value={input} onChange={(e) => searching(e)} ></Search>
-                    <ClearIcon><Clear onClick={() => clear()} width="15" height="15" fill="black" /></ClearIcon>
+                    {input ? <ClearIcon><Clear onClick={() => clear()} width="15" height="15" fill="black" /></ClearIcon> : <></>}
                 </SearchContainer>
                 : <></>}
             <MenuIcon>
                 <Menu onClick={() => setNav(true)} style={{width: "20px", height: "20px", cursor: "pointer", fill: "white"}} />
             </MenuIcon>
-        </Container>
+        </Container >
     );
 }
 export default Header

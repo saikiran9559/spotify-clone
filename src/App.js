@@ -5,7 +5,7 @@ import DashBoard from './pages/dashboard'
 import Redirect from './pages/redirect'
 import PlayList from './pages/playlist'
 import UserAllPlaylists from './pages/userAllPlaylists'
-import Search from './pages/search'
+import Search from './pages/search/search'
 import AllSearchTracks from './pages/allSearchTracks/allSearchTracks'
 import AllResultType from './components/searchAllResultType/searchAllResultType'
 import Empty from './pages/emptypage'
@@ -31,7 +31,6 @@ const App = () => {
                     <Route path="search/:query/playlists" element={<AllResultType type="playlists" key="playlists" />} />
                     <Route path="search/:query/episodes" element={<AllResultType type="episodes" key="episodes" />} />
                     <Route path="search/:query/shows" element={<AllResultType type="shows" key="shows" />} />
-                    <Route path="/artist/:id" element={<Empty />} />
                 </Route>
             </Routes>
         </BrowserRouter >

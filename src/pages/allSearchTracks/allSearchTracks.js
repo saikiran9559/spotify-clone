@@ -1,7 +1,7 @@
 
 import {useParams, useOutletContext} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import getRequest from './../../services/axios'
+import {getRequest} from './../../services/axios'
 import {
     Container1,
     Container,

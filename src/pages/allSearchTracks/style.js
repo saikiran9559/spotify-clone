@@ -4,10 +4,7 @@ export const Container1 = styled.div`
     display: inline;
     padding-top: 30px;
     @media(min-width:601px){
-        display: none;
-        // display: flex;
-        // flex-direcion: column;
-    padding-top:0px;
+        padding-top:0px;
     }
 `
 export const Container = styled.div`

@@ -1,17 +1,18 @@
 import {useEffect, useState} from "react";
-import AllSearchTrack from './allSearchTracks/allSearchTracks'
-import getRequest from '../services/axios'
-import TopResult from '../components/topResult/topResult'
-import SearchTracks from '../components/searchTracks/searchTracks'
-import SearchResultType from '../components/searchResultType/searchResultType'
+import AllSearchTrack from './../allSearchTracks/allSearchTracks'
+import {getRequest} from './../../services/axios'
+import TopResult from './../../components/topResult/topResult'
+import SearchTracks from './../../components/searchTracks/searchTracks'
+import SearchResultType from './../../components/searchResultType/searchResultType'
 import {useParams} from "react-router-dom";
 import {
     EmptyContainer,
+    Tracks,
     Container,
     TopAndTracks,
     SelectType,
     TypeButton,
-} from '../styles/search.style'
+} from './style'
 const Search = () => {
     const [result, setResult] = useState()
     const {query} = useParams();
@@ -47,7 +48,7 @@ const Search = () => {
     return (
         <Container>
             <TopAndTracks>
-                <TopResult topPick={result?.albums.items[0]} />
+                <TopResult topPick={result?.tracks.items[0].album} />
                 <SearchTracks result={result?.tracks} />
             </TopAndTracks>
             <SelectType>
@@ -58,7 +59,7 @@ const Search = () => {
                 {result?.shows.items.length ? <TypeButton select={select} type="show" onClick={() => setSelect("show")}>Shows</TypeButton> : <></>}
                 {result?.episodes.items.length ? <TypeButton select={select} type="episode" onClick={() => setSelect("episode")}>Episodes</TypeButton> : <></>}
             </SelectType>
-            {select == "track" ? <AllSearchTrack /> : <></>}
+            {select == "track" ? <Tracks><AllSearchTrack /></Tracks> : <></>}
             {result?.artists.items.length ? <SearchResultType select={select} type="artist" data={result?.artists} key="artists" /> : <></>}
             {result?.albums.items.length ? <SearchResultType select={select} type="album" data={result?.albums} key="albums" /> : <></>}
             {result?.playlists.items.length ? <SearchResultType select={select} type="playlist" data={result?.playlists} key="playlists" /> : <></>}
@@ -68,9 +69,4 @@ const Search = () => {
     );
 }
 
-// <SearchResultType data={result?.artists} key="artists" />
-// <SearchResultType data={result?.albums} key="albums" />
-// <SearchResultType data={result?.playlists} key="playlists" />
-// <SearchResultType data={result?.shows} key="shows" />
-// <SearchResultType data={result?.episodes} key="episodes" />
 export default Search

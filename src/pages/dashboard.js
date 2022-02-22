@@ -10,7 +10,6 @@ const Dashboard = () => {
     const navigate = useNavigate();
     const accessToken = JSON.parse(localStorage.getItem('params')).access_token;
     useEffect(() => {
-        console.log(accessToken);
         if (!accessToken) {
             navigate("/login")
         }

@@ -19,7 +19,7 @@ export const Container = styled.nav`
 // ${({width}) => width ? "300px" : "0px"}
         position: fixed;
         left:0px;
-        width: ${({nav}) => nav? "100%" : "0%"};
+        width: ${({nav}) => nav ? "100%" : "0%"};
         z-index:2;
     }
     // align-items: center;
@@ -54,12 +54,15 @@ export const Item = styled.div`
     gap:16px;
     width: 90%;
     width: 100%;
+    color: white;
 `
 export const Name = styled.div`
     font-size: 0.875rem;
     line-height: 1rem;
     text-transform: none;
     letter-spacing: normal;
+    color: white;
+    text-decoration: inherit;
 `
 export const Playlists = styled.div`
     display: flex;
